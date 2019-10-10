@@ -1,0 +1,109 @@
+body {
+  overflow-x: hidden;
+}
+
+html,body {
+  padding: 0;
+  margin: 0;
+  overflow-x:hidden; 
+  font-family: PingFangSC, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif!important;
+} 
+a {
+  color:#3366ffc7;// #30c68f;//#0166ff;
+}
+.separator{
+  background-image: linear-gradient(left, transparent, #888, transparent);
+  background-image: -webkit-linear-gradient(left, transparent, #888, transparent);
+  height: 1px;
+  width:100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-x:hidden; 
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1195px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-x:hidden; 
+} 
+
+.text-right {
+  text-align: right;
+} 
+
+
+.sec-title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #333;
+  line-height: 34px;
+}
+
+.section-line {
+  height: 1px;
+  width: 95%;
+  background: #ddd;
+  position: relative;
+  margin-top: 12px;
+  margin-bottom: 24px;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: #3667c3;
+    border-radius: 100px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+  }
+} 
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ellipsis2,
+.ellipsis3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+} 

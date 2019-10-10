@@ -1,0 +1,227 @@
+.header {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    .ant-menu {
+      .btn {
+        color: #fff !important;
+        padding: 0 25px !important;
+        line-height: 30px !important;
+        margin-bottom: 16px !important;
+        margin-top: 0 !important;
+      }
+  
+      .btn-bg {
+        background: #00a4ff !important;
+      }
+      .btn-bg1 {
+        background:transparent !important;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .ant-menu {
+        .btn {
+          float: right;
+          margin-top: 16px !important;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  
+    .logo {
+      width: 64px;
+      height: 64px;
+      background-image: url("/static/logo.png");
+      background-size: 60px 60px;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      margin-right: 8rem !important;
+    }
+  }
+  
+  .main {
+    margin-top: 64px;
+    .menu {
+      background: #fff;
+    }
+  
+    .content {
+      background: #f0f2f5;
+      &>div {
+        background: #fff;
+       
+      }
+      .grid,.form-view,.form-edit{
+        min-height: 570px;
+      }
+    }
+  }
+  
+  .adver {
+    position: relative;
+    height: 175px;
+    opacity: 0.83;
+    background: #49BBF8;
+    background: linear-gradient(to bottom, #49BBF8, #2386EE);
+  
+    .bg-pic {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 50%;
+      margin-left: -342px;
+      width: 827px;
+      height: 304px;
+      background-repeat: no-repeat;
+      background-image:url("/static/bottom.png")
+    }
+  
+    p {
+      text-align: center;
+      font-size: 24px;
+      color: #FFF;
+      padding-top: 45px;
+      letter-spacing: 0;
+      line-height: 33px;
+      font-family: PingFangSC-Light, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    }
+  
+    a {
+      display: block;
+      width: 94px;
+      height: 28px;
+      margin: 16px auto;
+      border: 1px solid #FFFFFF;
+      border-radius: 100px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff!important;
+      line-height: 28px;
+      cursor: pointer;
+  
+      &:hover {
+        color: #ddd;
+      }
+    }
+  }
+  
+.footer {
+  font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  background: #1d284d !important;
+  background: rgba(29, 40, 77, 0.95) !important;
+  overflow: hidden;
+
+  .footer-list {
+    margin: 15px auto 0 auto;
+    font-size: 0;
+    border-bottom: 1px solid #E5E6FF;
+    border-bottom: 1px solid rgba(229, 230, 255, 0.14);
+    background: transparent;
+
+    .columns-solve,
+    .columns-enter {
+      height: 120px;
+    }
+
+    .columns-contacts {
+      color: #fff;
+      text-align: right;
+      height: 90px;
+
+      h3,
+      ul {
+        text-align: left;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .columns {
+    background: transparent;
+    display: inline-block;
+    vertical-align: top;
+    height: 140px;
+    text-align: left;
+    color: #9ba3a6;
+    font-size: 12px;
+
+    h3 {
+      margin-bottom: 8px;
+      height: 20px;
+      line-height: 20px;
+      color: #9ba3a6;
+      font-weight: 500;
+      font-size: 15px;
+      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    }
+
+    a {
+      height: 21px;
+      line-height: 17px;
+      color: #fff!important;
+      font-size: 12px;
+      transition: all 0.2s ease;
+      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    }
+  }
+
+  .footer-link {
+    margin-top: 24px;
+
+    ul {
+      display: inline-block;
+      vertical-align: middle;
+
+      li {
+        display: inline-block;
+        margin-right: 40px;
+        height: 25px;
+        line-height: 25px;
+
+        a {
+          font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+          color: #B8B8B8;
+        }
+      }
+    }
+  }
+
+  .footer-copyright {
+    margin: 20px 0 10px 0!important;
+    text-align: center;
+    background: transparent;
+    color: #B8B8B8;
+    font-size: 12px;
+    letter-spacing: 1px;
+    a {
+      color: #FFFFFF!important;
+      transition: all 0.2s ease;
+      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    }
+  }
+}
+
+.float-btns {
+  position: fixed;
+  right: 10px;
+  bottom: 10%;
+  z-index: 100;
+
+  .ant-col {
+    &>div {
+      cursor: pointer;
+      margin-bottom: 2px;
+      width: 50px;
+      height: 50px;
+      background: #cfcfcf;
+      padding: 10px;
+    }
+
+    .iconfont {
+      line-height: 26px;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+}
