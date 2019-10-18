@@ -60,10 +60,22 @@ var _Select = require('./components/form/Select');
 
 var _Select2 = _interopRequireDefault(_Select);
 
+var _dicJson = require('./dicJson');
+
+var _dicJson2 = _interopRequireDefault(_dicJson);
+
+var _dicList = require('./dicList');
+
+var _dicList2 = _interopRequireDefault(_dicList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //工具类
 module.exports = {
+    //data、conifg
+    dicJson: _dicJson2.default,
+    dicList: _dicList2.default,
+    //utiil
     check: _check2.default,
     axios: _axios2.default,
     array: _array2.default,
@@ -75,10 +87,11 @@ module.exports = {
     file: _file2.default,
     net: _net2.default,
     xlsx: _xlsx2.default,
-
+    // components
     Dic: _Dic2.default,
     Select: _Select2.default,
     File: _File2.default
+
 };
 //组件
 //内核

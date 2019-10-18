@@ -17,9 +17,15 @@ import xlsx from './utils/xlsx';
 import Dic from './components/form/Dic';
 import File from './components/form/File';
 import Select from './components/form/Select';
+import dicJson from './dicJson'
+import dicList from './dicList'
 
 
 module.exports = {
+//data、conifg
+    dicJson,
+    dicList,
+//utiil
     check,
     axios,
     array,
@@ -31,8 +37,12 @@ module.exports = {
     file,
     net,
     xlsx,
-
+// components
     Dic,
     Select,
-    File
+    File,
+
+
+
+
 }

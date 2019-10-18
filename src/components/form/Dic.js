@@ -1,5 +1,6 @@
 import React from 'react';
 import { Select } from 'antd';
+import dicList from '../../dicList'
 import axios from '../../utils/axios';
 
 const Option = Select.Option;
@@ -13,21 +14,33 @@ export default  class Dic extends React.Component {
             nullText:"请选择",
             data:[]
         }
-        this.initData()
+        this.initData();
     }
     
     async initData(){
-        let rs= await axios.post(url,this.props.params);
-        this.setState({data:rs.data})
+        if(this.props.sync){
+            let rs= await axios.post(url,this.props.params);
+            this.setState({data:rs.data});
+        }
     }
     init(){
         var me=this;
         const rows = [];
         this.state.hasNullVal&&rows.push(<Option key="-1" value={this.state.nullValue}>{this.state.nullText}</Option>);
-        if(!this.state.data)return rows;
-        var len=this.state.data.length;
+        let data;
+        if(this.props.sync){
+            data=this.state.data;
+        }else{
+            if(this.props.params.subType){
+                data=dicList[this.props.params.app][this.props.params.type][this.props.params.subType];
+            }else {
+                data=dicList[this.props.params.app][this.props.params.type];
+            }
+        }
+        if(!data)return rows;
+        var len=data.length;
         for(let i=0;i<len;i++){
-            let item=this.state.data[i];
+            let item=data[i];
             let value=item.value
             let text=item.zh_CN
             rows.push(<Option key={value} title={text}>{text}</Option>);

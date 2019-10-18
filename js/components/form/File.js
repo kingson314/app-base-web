@@ -30,25 +30,37 @@ var File = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (File.__proto__ || Object.getPrototypeOf(File)).call(this, props));
 
+    var _fileList = [];
+    if (_this.props.fileList) {
+      _fileList = JSON.parse(_this.props.fileList);
+    }
     _this.state = {
-      fileList: []
+      fileList: _fileList
     };
     return _this;
   }
 
   _createClass(File, [{
-    key: 'handleChange',
-    value: function handleChange(info) {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.props.onRef && this.props.onRef(this);
+    }
+  }, {
+    key: 'onChange',
+    value: function onChange(info) {
+      var _this2 = this;
+
       var fileList = [].concat(_toConsumableArray(info.fileList));
-      for (var i = 0; i < fileList.length; i++) {
-        if (fileList[i].response && fileList[i].response.success) {
-          fileList[i].url = this.props.serverPath + fileList[i].response.data.file[0];
-        }
-      }
       fileList = fileList.map(function (file) {
+        if (file.response) {
+          file.url = _this2.props.serverPath + file.response.data.file[0];
+          delete file.lastModifiedDate;
+          delete file.originFileObj;
+          delete file.response;
+        }
         return file;
       });
-      console.log(fileList);
+      // console.log(fileList);
       this.setState({ fileList: fileList });
     }
   }, {
@@ -56,10 +68,10 @@ var File = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         _antd.Upload,
-        { action: this.props.serverPath + "/upload/run", multiple: 'true', onChange: this.handleChange.bind(this), fileList: this.state.fileList, listType: 'picture' },
+        { action: this.props.serverPath + "upload/run", multiple: true, onChange: this.onChange.bind(this), fileList: this.state.fileList, listType: 'picture' },
         _react2.default.createElement(
           _antd.Button,
-          null,
+          { style: { display: this.props.hide == "true" ? "none" : "" } },
           _react2.default.createElement(_antd.Icon, { type: 'upload' }),
           ' \u4E0A\u4F20'
         )

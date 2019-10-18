@@ -12,6 +12,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _antd = require('antd');
 
+var _dicList = require('../../dicList');
+
+var _dicList2 = _interopRequireDefault(_dicList);
+
 var _axios = require('../../utils/axios');
 
 var _axios2 = _interopRequireDefault(_axios);
@@ -48,8 +52,10 @@ var Dic = function (_React$Component) {
     _createClass(Dic, [{
         key: 'initData',
         value: async function initData() {
-            var rs = await _axios2.default.post(url, this.props.params);
-            this.setState({ data: rs.data });
+            if (this.props.sync) {
+                var rs = await _axios2.default.post(url, this.props.params);
+                this.setState({ data: rs.data });
+            }
         }
     }, {
         key: 'init',
@@ -61,10 +67,20 @@ var Dic = function (_React$Component) {
                 { key: '-1', value: this.state.nullValue },
                 this.state.nullText
             ));
-            if (!this.state.data) return rows;
-            var len = this.state.data.length;
+            var data = void 0;
+            if (this.props.sync) {
+                data = this.state.data;
+            } else {
+                if (this.props.params.subType) {
+                    data = _dicList2.default[this.props.params.app][this.props.params.type][this.props.params.subType];
+                } else {
+                    data = _dicList2.default[this.props.params.app][this.props.params.type];
+                }
+            }
+            if (!data) return rows;
+            var len = data.length;
             for (var i = 0; i < len; i++) {
-                var item = this.state.data[i];
+                var item = data[i];
                 var value = item.value;
                 var text = item.zh_CN;
                 rows.push(_react2.default.createElement(
