@@ -21,6 +21,7 @@ export default class File extends React.Component {
     fileList = fileList.map(file => {
       if (file.response) {
         file.url = this.props.serverPath+file.response.data.file[0];
+        file.thumbUrl=file.url;
         delete file.lastModifiedDate;
         delete file.originFileObj;
         delete file.response;

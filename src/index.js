@@ -15,13 +15,16 @@ import net from './utils/net';
 import xlsx from './utils/xlsx';
 //组件
 import Dic from './components/form/Dic';
+import District from './components/form/District';
 import File from './components/form/File';
 import Select from './components/form/Select';
+import Tree from './components/Tree';
+//datas
 import dicJson from './dicJson'
 import dicList from './dicList'
 
 
-module.exports = {
+module.exports = { 
 //data、conifg
     dicJson,
     dicList,
@@ -33,16 +36,14 @@ module.exports = {
     string,
     jquery,
     date,
-    event,
+    event, 
     file,
     net,
     xlsx,
 // components
     Dic,
-    Select,
+    District,
     File,
-
-
-
-
+    Select,
+    Tree,
 }

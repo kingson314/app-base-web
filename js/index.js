@@ -52,6 +52,10 @@ var _Dic = require('./components/form/Dic');
 
 var _Dic2 = _interopRequireDefault(_Dic);
 
+var _District = require('./components/form/District');
+
+var _District2 = _interopRequireDefault(_District);
+
 var _File = require('./components/form/File');
 
 var _File2 = _interopRequireDefault(_File);
@@ -59,6 +63,10 @@ var _File2 = _interopRequireDefault(_File);
 var _Select = require('./components/form/Select');
 
 var _Select2 = _interopRequireDefault(_Select);
+
+var _Tree = require('./components/Tree');
+
+var _Tree2 = _interopRequireDefault(_Tree);
 
 var _dicJson = require('./dicJson');
 
@@ -69,6 +77,8 @@ var _dicList = require('./dicList');
 var _dicList2 = _interopRequireDefault(_dicList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//datas
 
 //工具类
 module.exports = {
@@ -89,9 +99,10 @@ module.exports = {
     xlsx: _xlsx2.default,
     // components
     Dic: _Dic2.default,
+    District: _District2.default,
+    File: _File2.default,
     Select: _Select2.default,
-    File: _File2.default
-
+    Tree: _Tree2.default
 };
 //组件
 //内核

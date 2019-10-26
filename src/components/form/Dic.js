@@ -18,7 +18,7 @@ export default  class Dic extends React.Component {
     }
     
     async initData(){
-        if(this.props.sync){
+        if(this.props.sync){ 
             let rs= await axios.post(url,this.props.params);
             this.setState({data:rs.data});
         }

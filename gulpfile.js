@@ -22,29 +22,55 @@ const scss = {
   dest: 'css'
 } 
 const js = {
-  src: 'src/js/**/*',
+  src: 'src/**/*',
   dest: 'js'
 } 
 
 //清理构建目录
 gulp.task('clean', function() {
-  return gulp.src([ 'dist','css'], {
-    read: false
+  return gulp.src([ 'css'], {
+    read: false,
+    allowEmpty: true
   }).pipe(clean({
     force: true
   }));
 });
-gulp.task('js', () => {
-  return gulp.src(js.src)
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    // .pipe(concat('main.js'))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(js.dest))
-})
+//拷贝
+gulp.task('copy', function() {
+  let dist="/Volumes/Docs/Git/app-spm-web/node_modules/app-base-web/"
+   gulp.src([scss.dest+ '/**/*'], {
+  }).pipe(gulp.dest(dist+"css"));
+   gulp.src([js.dest+ '/**/*'], {
+  }).pipe(gulp.dest(dist+"js"));
+  gulp.src(['src/**/*'], {
+  }).pipe(gulp.dest(dist+"src"));
+
+
+  dist="/Volumes/Docs/Git/app-qy-web/node_modules/app-base-web/"
+   gulp.src([scss.dest+ '/**/*'], {
+  }).pipe(gulp.dest(dist+"css"));
+   gulp.src([js.dest+ '/**/*'], {
+  }).pipe(gulp.dest(dist+"js"));
+  
+  return gulp.src(['src/**/*'], {
+  }).pipe(gulp.dest(dist+"src"));
+  // return gulp.src(['/Volumes/Docs/Git/app-base-web/**/*'], {
+  // }).pipe(gulp.dest(dist));
+});
+
+// gulp.task('js', () => {
+//   console.log(js.src);
+//   return gulp.src(js.src)
+//     .pipe(plumber())
+//     .pipe(sourcemaps.init())
+//     // .pipe(concat('main.js'))
+//     .pipe(uglify())
+//     .pipe(sourcemaps.write('.'))
+//     .pipe(gulp.dest(js.dest))
+// });
 
 gulp.task('sass', () => {
+  console.log(scss.src);
   return gulp.src(scss.src)
     .pipe(plumber())
     .pipe(sourcemaps.init())
@@ -71,9 +97,36 @@ gulp.task('sass', () => {
 // })
 
 gulp.task('watch', () => {
-  gulp.watch(scss.src, ['sass'])
-  // gulp.watch(js.src, ['js'])
-})
+  gulp.watch([scss.src],gulp.series('sass',() => {
+    return new Promise(function(resolve, reject) {
+      console.log("complete")
+      resolve();
+    });
+  })); 
+});
 
-gulp.task('default', ['clean','js', 'sass', 'watch'])
-gulp.task('build', ['clean','js', 'sass'])
+// gulp.task("watch",async ()=>{
+//         gulp.watch(scss.src,async ()=>{
+//           console.log(scss.src);
+//             return gulp.src(scss.src)
+//           .pipe(plumber())
+//           .pipe(sourcemaps.init())
+//           .pipe(sass().on('error', sass.logError))
+//           .pipe(gulpAutoprefixer({
+//             browsers: ['last 2 versions'],
+//             cascade: false
+//           }))
+//           // .pipe(concat('main.css'))
+//           .pipe(minifyCSS())
+//           .pipe(sourcemaps.write('.'))
+//           .pipe(gulp.dest(scss.dest))
+//         });
+//   });
+
+gulp.task('build',gulp.series('clean', 'sass','copy',() => {
+  return new Promise(function(resolve, reject) {
+    console.log("complete")
+    resolve();
+  });
+}));
+// gulp.task('default',gulp.series('watch'));

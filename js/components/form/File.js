@@ -54,6 +54,7 @@ var File = function (_React$Component) {
       fileList = fileList.map(function (file) {
         if (file.response) {
           file.url = _this2.props.serverPath + file.response.data.file[0];
+          file.thumbUrl = file.url;
           delete file.lastModifiedDate;
           delete file.originFileObj;
           delete file.response;

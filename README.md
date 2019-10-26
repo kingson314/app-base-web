@@ -1,17 +1,32 @@
 # `app-base-web`
-
 web development common base package.
-
 ## 安装环境
+# 切换node版本
+sudo n 11.0.0
+# 安装包
 npm i
 npm audit fix
 npm audit fix --force
-## 编译js
+# 编译js
 npm run build
-#编辑css
+# 编辑css
 gulp build
-## 发布
-npm publish
+
+##### 平时编译并复制到对应的工程
+npm run build && gulp build
+##### 发布时
+npm run build && gulp build && npm publish
+
+
+
+
+
+
+
+
+
+
+
 
 ## 项目应用
 
@@ -20,7 +35,7 @@ npm i app-base-web
 yarn add app-base-web
 ```
 
-#### `modules`
+####  `modules`
 ```
 import utils from 'app-base-web'
 //or
@@ -55,7 +70,7 @@ import _ from 'app-base-web/lodash'
 _.chunk(['a', 'b', 'c', 'd'],2) //[['a', 'b'], ['c', 'd']]
 ```
 
-#### `css`
+## `css`
 ```
 import 'app-base-web/css/base.css'
 
