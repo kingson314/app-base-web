@@ -67,6 +67,18 @@ a {
 .text-right {
   text-align: right;
 } 
+.fr {
+  float: right;
+} 
+.fl {
+  float: left;
+} 
+.show{
+  display: "";
+}
+.hide{
+  display: none!important;
+}
 
 .sec-title {
   font-weight: 700;

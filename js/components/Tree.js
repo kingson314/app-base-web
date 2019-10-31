@@ -52,7 +52,6 @@ var MyTreeSelect = function (_React$Component) {
     value: async function initData() {
       var rs = await _axios2.default.post(this.props.url, this.props.params || {});
       this.setState({ treeData: rs.data });
-      // console.log(JSON.stringify(this.state.treeData));
     }
   }, {
     key: 'componentDidMount',
@@ -62,23 +61,24 @@ var MyTreeSelect = function (_React$Component) {
   }, {
     key: 'onChange',
     value: function onChange(value, label, extra) {
-      this.setState({ value: value, label: label });
-      if (this.props.onChange) this.props.onChange(value, label, extra);
+      if (value) {
+        if (value instanceof Array) {
+          value = JSON.stringify(value);
+        } else {
+          value = JSON.stringify([value]);
+        }
+      }
+      if (label) label = JSON.stringify(label);
+      if (this.props.onChange) this.props.onChange(value, label);else this.setState({ value: value, label: label });
     }
   }, {
     key: 'render',
     value: function render() {
-      var value = this.state.value;
-      if (this.props.value) {
-        value = this.props.value;
-      }
-      if (this.state.value instanceof Array) {
-        value = this.state.value;
-      }
-      console.log(value);
+      var _value = this.state.value;
+      if (this.props.value) _value = JSON.parse(this.props.value);
       var tProps = {
         treeData: this.state.treeData,
-        "value": value,
+        "value": _value,
         treeCheckable: this.props.treeCheckable,
         showCheckedStrategy: this.props.showCheckedStrategy || "SHOW_CHILD", //SHOW_CHILD |  SHOW_ALL | SHOW_PARENT
         searchPlaceholder: this.props.placeholder || '请选择',

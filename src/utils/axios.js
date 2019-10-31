@@ -1,5 +1,7 @@
 import axios from 'axios'
 module.exports = {
+    _DicList:{},
+    _DicJson:{},
     get:function(url, data) {
         return new Promise((resolve, reject) => {
             axios.get(url)
@@ -8,11 +10,12 @@ module.exports = {
                 }, reject)
         })
     },
-    post:function(url, data) {
+    post:function(url, data,callback) {
         return new Promise((resolve, reject) => {
             axios.post(url, data)
                 .then((response) => {
-                    resolve(response.data)
+                    resolve(response.data);
+                    callback&& callback(response.data);
                 }, reject)
         });
     }

@@ -349,4 +349,19 @@ module.exports = (_module$exports = {
     return "";
   }
   return rs;
+}), _defineProperty(_module$exports, 'toString', function toString(arr, separator) {
+  if (!separator) separator = " / ";
+  if (!arr) return "";
+  if (!(arr instanceof Array)) {
+    arr = JSON.parse(arr);
+  }
+  var rs = "";
+  for (var i = 0; i < arr.length; i++) {
+    if (i == 0) {
+      rs = arr[i];
+    } else {
+      rs = rs + separator + arr[i];
+    }
+  }
+  return rs;
 }), _module$exports);

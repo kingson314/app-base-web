@@ -12,13 +12,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _antd = require('antd');
 
-var _dicList = require('../../dicList');
+var _dic = require('../../utils/dic');
 
-var _dicList2 = _interopRequireDefault(_dicList);
-
-var _axios = require('../../utils/axios');
-
-var _axios2 = _interopRequireDefault(_axios);
+var _dic2 = _interopRequireDefault(_dic);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27,9 +23,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+// import dicList from '../../dicList'
+// import axios from '../../utils/axios';
+
 
 var Option = _antd.Select.Option;
-var url = "CfgDictionary/getByType";
+// const url= "CfgDictionary/getByType";
 
 var Dic = function (_React$Component) {
     _inherits(Dic, _React$Component);
@@ -44,20 +43,19 @@ var Dic = function (_React$Component) {
             nullValue: "",
             nullText: "请选择",
             data: []
-        };
-        _this.initData();
-        return _this;
+            // this.initData();
+        };return _this;
     }
 
+    // async initData(){
+    //     if(this.props.sync){ 
+    //         let rs= await axios.post(url,this.props.params);
+    //         this.setState({data:rs.data});
+    //     }
+    // }
+
+
     _createClass(Dic, [{
-        key: 'initData',
-        value: async function initData() {
-            if (this.props.sync) {
-                var rs = await _axios2.default.post(url, this.props.params);
-                this.setState({ data: rs.data });
-            }
-        }
-    }, {
         key: 'init',
         value: function init() {
             var me = this;
@@ -68,15 +66,15 @@ var Dic = function (_React$Component) {
                 this.state.nullText
             ));
             var data = void 0;
-            if (this.props.sync) {
-                data = this.state.data;
+            // if(this.props.sync){
+            //     data=this.state.data;
+            // }else{
+            if (this.props.params.subType) {
+                data = _dic2.default.list(this.props.params.app, this.props.params.type, this.props.params.subType);
             } else {
-                if (this.props.params.subType) {
-                    data = _dicList2.default[this.props.params.app][this.props.params.type][this.props.params.subType];
-                } else {
-                    data = _dicList2.default[this.props.params.app][this.props.params.type];
-                }
+                data = _dic2.default.list(this.props.params.app, this.props.params.type);
             }
+            // }
             if (!data) return rows;
             var len = data.length;
             for (var i = 0; i < len; i++) {

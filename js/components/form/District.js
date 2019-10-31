@@ -11392,7 +11392,7 @@ var District = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (District.__proto__ || Object.getPrototypeOf(District)).call(this, props));
 
         _this.state = {
-            value: []
+            value: "[]"
         };
         return _this;
     }
@@ -11405,14 +11405,15 @@ var District = function (_React$Component) {
     }, {
         key: 'onChange',
         value: function onChange(value) {
-            // console.log(value);
-            this.setState({ value: value });
+            if (value) value = JSON.stringify(value);
+            if (this.props.onChange) this.props.onChange(value);else this.setState({ value: value });
         }
     }, {
         key: 'render',
         value: function render() {
+            var _value = JSON.parse(this.props.value || this.state.value);
             return _react2.default.createElement(_antd.Cascader, {
-                value: this.state.value,
+                value: _value,
                 placeholder: '\u8BF7\u9009\u62E9',
                 showSearch: true,
                 options: optionsData,

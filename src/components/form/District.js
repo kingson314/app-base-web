@@ -14594,20 +14594,22 @@ export default  class District extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            value:[]
+            value:"[]"
         }
     }
     componentDidMount() {
         this.props.onRef&&this.props.onRef(this);
     }
     onChange(value){
-        // console.log(value);
-        this.setState({ value });
+        if(value)value=JSON.stringify(value);
+        if(this.props.onChange)this.props.onChange(value);
+        else this.setState({value});
     }
     render() {
+        let _value=JSON.parse(this.props.value||this.state.value);
         return (
             <Cascader
-                value={this.state.value}
+                value={_value}
                 placeholder="请选择"
                 showSearch={true}
                 options={optionsData}

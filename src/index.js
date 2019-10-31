@@ -8,12 +8,14 @@ import array from './utils/array';
 import number from './utils/number';
 import string from './utils/string';
 import date from './utils/date';
+import dic from './utils/dic';
 
 import event from './utils/event';
 import file from './utils/file';
 import net from './utils/net';
 import xlsx from './utils/xlsx';
 //组件
+import CheckGroup from './components/form/CheckGroup';
 import Dic from './components/form/Dic';
 import District from './components/form/District';
 import File from './components/form/File';
@@ -36,11 +38,13 @@ module.exports = {
     string,
     jquery,
     date,
+    dic,
     event, 
     file,
     net,
     xlsx,
 // components
+    CheckGroup,
     Dic,
     District,
     File,

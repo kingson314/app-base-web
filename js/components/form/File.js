@@ -30,12 +30,8 @@ var File = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (File.__proto__ || Object.getPrototypeOf(File)).call(this, props));
 
-    var _fileList = [];
-    if (_this.props.fileList) {
-      _fileList = JSON.parse(_this.props.fileList);
-    }
     _this.state = {
-      fileList: _fileList
+      fileList: "[]"
     };
     return _this;
   }
@@ -61,15 +57,16 @@ var File = function (_React$Component) {
         }
         return file;
       });
-      // console.log(fileList);
-      this.setState({ fileList: fileList });
+      if (fileList) fileList = JSON.stringify(fileList);
+      if (this.props.onChange) this.props.onChange(fileList);else this.setState({ fileList: fileList });
     }
   }, {
     key: 'render',
     value: function render() {
+      var _fileList = JSON.parse(this.props.fileList || this.state.fileList);
       return _react2.default.createElement(
         _antd.Upload,
-        { action: this.props.serverPath + "upload/run", multiple: true, onChange: this.onChange.bind(this), fileList: this.state.fileList, listType: 'picture' },
+        { action: this.props.serverPath + "upload/run", multiple: true, onChange: this.onChange.bind(this), fileList: _fileList, listType: 'picture' },
         _react2.default.createElement(
           _antd.Button,
           { style: { display: this.props.hide == "true" ? "none" : "" } },

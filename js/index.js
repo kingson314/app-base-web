@@ -32,6 +32,10 @@ var _date = require('./utils/date');
 
 var _date2 = _interopRequireDefault(_date);
 
+var _dic = require('./utils/dic');
+
+var _dic2 = _interopRequireDefault(_dic);
+
 var _event = require('./utils/event');
 
 var _event2 = _interopRequireDefault(_event);
@@ -47,6 +51,10 @@ var _net2 = _interopRequireDefault(_net);
 var _xlsx = require('./utils/xlsx');
 
 var _xlsx2 = _interopRequireDefault(_xlsx);
+
+var _CheckGroup = require('./components/form/CheckGroup');
+
+var _CheckGroup2 = _interopRequireDefault(_CheckGroup);
 
 var _Dic = require('./components/form/Dic');
 
@@ -80,6 +88,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //datas
 
+//组件
+
 //工具类
 module.exports = {
     //data、conifg
@@ -93,16 +103,16 @@ module.exports = {
     string: _string2.default,
     jquery: _index2.default,
     date: _date2.default,
+    dic: _dic2.default,
     event: _event2.default,
     file: _file2.default,
     net: _net2.default,
     xlsx: _xlsx2.default,
     // components
+    CheckGroup: _CheckGroup2.default,
     Dic: _Dic2.default,
     District: _District2.default,
     File: _File2.default,
     Select: _Select2.default,
     Tree: _Tree2.default
-};
-//组件
-//内核
+}; //内核
