@@ -76,25 +76,12 @@ var _Tree = require('./components/Tree');
 
 var _Tree2 = _interopRequireDefault(_Tree);
 
-var _dicJson = require('./dicJson');
-
-var _dicJson2 = _interopRequireDefault(_dicJson);
-
-var _dicList = require('./dicList');
-
-var _dicList2 = _interopRequireDefault(_dicList);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//datas
 
 //组件
 
 //工具类
 module.exports = {
-    //data、conifg
-    dicJson: _dicJson2.default,
-    dicList: _dicList2.default,
     //utiil
     check: _check2.default,
     axios: _axios2.default,

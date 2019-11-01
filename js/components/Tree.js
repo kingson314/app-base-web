@@ -53,11 +53,10 @@ var MyTreeSelect = function (_React$Component) {
       var rs = await _axios2.default.post(this.props.url, this.props.params || {});
       this.setState({ treeData: rs.data });
     }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.props.onRef && this.props.onRef(this);
-    }
+    // componentDidMount() {
+    //   this.props.onRef && this.props.onRef(this);
+    // }
+
   }, {
     key: 'onChange',
     value: function onChange(value, label, extra) {

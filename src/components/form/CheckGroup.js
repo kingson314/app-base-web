@@ -23,7 +23,7 @@ export default  class CheckGroup extends React.Component {
         return (
             <Checkbox.Group value={_value} onChange={this.onChange.bind(this)}>
                 {this.props.options.map((item,index)=>{
-                    return <Checkbox  value={item}>{item}</Checkbox>
+                    return <Checkbox key={"chekbox-"+index} value={item}>{item}</Checkbox>
                 })}
             </Checkbox.Group>);
         

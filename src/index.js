@@ -20,16 +20,10 @@ import Dic from './components/form/Dic';
 import District from './components/form/District';
 import File from './components/form/File';
 import Select from './components/form/Select';
-import Tree from './components/Tree';
-//datas
-import dicJson from './dicJson'
-import dicList from './dicList'
+import Tree from './components/Tree'; 
 
 
 module.exports = { 
-//data、conifg
-    dicJson,
-    dicList,
 //utiil
     check,
     axios,
