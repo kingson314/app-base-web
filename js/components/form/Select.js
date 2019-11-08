@@ -52,8 +52,8 @@ var Select1 = function (_React$Component) {
         key: 'initData',
         value: async function initData() {
             if (this.props.url) {
-                var _rs = await _axios2.default.post(this.props.url, this.props.params);
-                this.setState({ data: _rs.data });
+                var rs = await _axios2.default.post(this.props.url, this.props.params || {});
+                this.setState({ data: rs.data });
             }
         }
     }, {
@@ -70,7 +70,7 @@ var Select1 = function (_React$Component) {
                 if (!this.state.data) return rows;
                 var len = this.state.data.length;
                 for (var i = 0; i < len; i++) {
-                    var item = rs.data[i];
+                    var item = this.state.data[i];
                     var value = item[me.state.valueKey];
                     var text = item[me.state.textKey];
                     rows.push(_react2.default.createElement(

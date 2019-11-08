@@ -20,7 +20,7 @@ export default  class Select1 extends React.Component {
     
     async initData(){
         if(this.props.url){
-            let rs= await axios.post(this.props.url,this.props.params);
+            let rs= await axios.post(this.props.url,this.props.params||{});
             this.setState({data:rs.data})
         }
     } 
@@ -32,7 +32,7 @@ export default  class Select1 extends React.Component {
             if(!this.state.data)return rows;
             var len=this.state.data.length;
             for(let i=0;i<len;i++){
-                let item=rs.data[i];
+                let item=this.state.data[i];
                 let value=item[me.state.valueKey]
                 let text=item[me.state.textKey];
                 rows.push(<Option key={value} >{text}</Option>);

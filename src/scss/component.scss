@@ -97,6 +97,22 @@
     border-color: #ff4d4f!important;
   }
 }
+.btn-add {
+  color: #fff!important;
+  background-color: #3cb035!important;
+  border-color: #3cb035!important;
+  height: 26px!important;
+  padding: 0 12px!important;
+  border-radius: 13px!important;
+  font-size: 13px!important;
+  line-height: 1!important;
+  vertical-align: text-bottom!important;
+  margin-left: 15px;
+  &:hover {
+    color: #3cb035!important;
+    background-color: #fff!important;
+  }
+}
 .form-edit,
 .form-view {
   padding: 0 15% 0 8% !important;

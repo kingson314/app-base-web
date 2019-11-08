@@ -79,6 +79,7 @@ var MyTreeSelect = function (_React$Component) {
         treeData: this.state.treeData,
         "value": _value,
         treeCheckable: this.props.treeCheckable,
+        treeDefaultExpandAll: this.props.treeDefaultEexpandAll == false ? false : true,
         showCheckedStrategy: this.props.showCheckedStrategy || "SHOW_CHILD", //SHOW_CHILD |  SHOW_ALL | SHOW_PARENT
         searchPlaceholder: this.props.placeholder || '请选择',
         showSearch: this.props.showSearch || true,
