@@ -29,6 +29,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var Option = _antd.Select.Option;
 // const url= "CfgDictionary/getByType";
+//value必须转换为字符串
 
 var Dic = function (_React$Component) {
     _inherits(Dic, _React$Component);
@@ -46,7 +47,6 @@ var Dic = function (_React$Component) {
             // this.initData();
         };return _this;
     }
-
     // async initData(){
     //     if(this.props.sync){ 
     //         let rs= await axios.post(url,this.props.params);

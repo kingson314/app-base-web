@@ -5,6 +5,7 @@ import { Select } from 'antd';
 import dic from '../../utils/dic';
 const Option = Select.Option;
 // const url= "CfgDictionary/getByType";
+//value必须转换为字符串
 export default  class Dic extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +17,6 @@ export default  class Dic extends React.Component {
         }
         // this.initData();
     }
-    
     // async initData(){
     //     if(this.props.sync){ 
     //         let rs= await axios.post(url,this.props.params);
@@ -41,8 +41,8 @@ export default  class Dic extends React.Component {
         var len=data.length;
         for(let i=0;i<len;i++){
             let item=data[i];
-            let value=item.value
-            let text=item.zh_CN
+            let value=item.value;
+            let text=item.zh_CN;
             rows.push(<Option key={value} title={text}>{text}</Option>);
         };
         return rows;

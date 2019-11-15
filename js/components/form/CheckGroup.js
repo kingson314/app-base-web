@@ -55,7 +55,7 @@ var CheckGroup = function (_React$Component) {
                 this.props.options.map(function (item, index) {
                     return _react2.default.createElement(
                         _antd.Checkbox,
-                        { key: "chekbox-" + index, value: item },
+                        { style: { marginRight: "5px" }, key: "chekbox-" + index, value: item },
                         item
                     );
                 })

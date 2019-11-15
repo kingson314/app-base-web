@@ -76,11 +76,13 @@ var _Tree = require('./components/Tree');
 
 var _Tree2 = _interopRequireDefault(_Tree);
 
+var _Empty = require('./components/Empty');
+
+var _Empty2 = _interopRequireDefault(_Empty);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//组件
-
-//工具类
+//内核
 module.exports = {
     //utiil
     check: _check2.default,
@@ -101,5 +103,9 @@ module.exports = {
     District: _District2.default,
     File: _File2.default,
     Select: _Select2.default,
-    Tree: _Tree2.default
-}; //内核
+    Tree: _Tree2.default,
+    Empty: _Empty2.default
+};
+//组件
+
+//工具类

@@ -20,7 +20,8 @@ import Dic from './components/form/Dic';
 import District from './components/form/District';
 import File from './components/form/File';
 import Select from './components/form/Select';
-import Tree from './components/Tree'; 
+import Tree from './components/Tree';
+import Empty from './components/Empty'; 
 
 
 module.exports = { 
@@ -44,4 +45,5 @@ module.exports = {
     File,
     Select,
     Tree,
+    Empty,
 }
