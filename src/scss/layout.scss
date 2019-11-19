@@ -28,15 +28,15 @@
         }
       }
     }
-  
+   
     .logo {
-      width: 64px;
+      width: 220px;
       height: 64px;
       background-image: url("/static/logo.png");
-      background-size: 60px 60px;
+      background-size: 220px 60px;
       background-position: bottom;
       background-repeat: no-repeat;
-      margin-right: 8rem !important;
+      margin-right: 1rem !important;
     }
   }
   
@@ -53,7 +53,7 @@
        
       }
       .grid,.form-view,.form-edit{
-        min-height: 500px;
+        min-height: 550px;
       }
     }
   }
@@ -110,7 +110,7 @@
   font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   background: #1d284d !important;
   background: rgba(29, 40, 77, 0.95) !important;
-  overflow: hidden;
+  overflow: hidden; 
 
   .footer-list {
     margin: 15px auto 0 auto;
