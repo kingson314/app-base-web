@@ -14610,7 +14610,7 @@ export default  class District extends React.Component {
         return (
             <Cascader
                 value={_value}
-                placeholder="请选择"
+                placeholder="请选择所在地"
                 showSearch={true}
                 options={optionsData}
                 onChange={this.onChange.bind(this)}

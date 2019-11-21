@@ -11414,7 +11414,7 @@ var District = function (_React$Component) {
             var _value = JSON.parse(this.props.value || this.state.value);
             return _react2.default.createElement(_antd.Cascader, {
                 value: _value,
-                placeholder: '\u8BF7\u9009\u62E9',
+                placeholder: '\u8BF7\u9009\u62E9\u6240\u5728\u5730',
                 showSearch: true,
                 options: optionsData,
                 onChange: this.onChange.bind(this)

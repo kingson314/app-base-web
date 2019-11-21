@@ -161,14 +161,17 @@
     text-align: right;
   }
 
+  .subtitle-edit{
+    color: #0088ff;
+    margin-bottom: 12px;
+    padding-left: 12px;
+  }
   .subtitle {
     color: #0088ff;
-    padding-left: 12px;
     margin-bottom: 12px;
   }
   .subtitle-large {
     color: #0088ff;
-    padding-left: 12px;
     margin-bottom: 12px;
     font-size: 18px;
   }
@@ -176,7 +179,7 @@
     color: #2db7f5;
   }
   .subcontent {
-    padding: 0 0 12px 12px;
+    padding: 0 0 12px 0;
   }
   .ant-divider {
     margin: 12px 0 !important;
@@ -230,11 +233,11 @@
 
 .myTab {
   .ant-tabs-tab-active .tab-span {
-    border-color: #096dd9;
-    color: #096dd9;
+    background-color: #a1d3ff;
+	  border: solid 1px #0088ff;
   }
   .ant-tabs-tab{
-    padding: 12px 6px!important;
+    padding: 12px 12px 12px 0!important;
   }
   .ant-tabs-ink-bar {
     background: none;
@@ -242,7 +245,7 @@
 }
 .new-target {
   color: #28b779 !important;
-  text-decoration: underline !important;
+  // text-decoration: underline !important;
   // border-bottom:1px solid #28B779!important;
   padding: 0 !important;
   font-size: 15px;
@@ -259,7 +262,8 @@
   }
 }
 .btn-collapse {
-  margin: 0 0 5px 0;
+  margin: 0;
+  padding-left:0!important;
   width: 100%;
   border: 0 !important;
   outline: none !important;

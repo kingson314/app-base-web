@@ -54,7 +54,7 @@ var Empty = function (_React$Component) {
                     _react2.default.createElement(
                         "p",
                         null,
-                        "No Data"
+                        "\u6CA1\u6709\u6570\u636E"
                     )
                 )
             );
