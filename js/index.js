@@ -80,9 +80,15 @@ var _Empty = require('./components/Empty');
 
 var _Empty2 = _interopRequireDefault(_Empty);
 
+var _Developing = require('./components/Developing');
+
+var _Developing2 = _interopRequireDefault(_Developing);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//内核
+//组件
+
+//工具类
 module.exports = {
     //utiil
     check: _check2.default,
@@ -104,8 +110,6 @@ module.exports = {
     File: _File2.default,
     Select: _Select2.default,
     Tree: _Tree2.default,
-    Empty: _Empty2.default
-};
-//组件
-
-//工具类
+    Empty: _Empty2.default,
+    Developing: _Developing2.default
+}; //内核

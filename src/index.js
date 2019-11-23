@@ -22,6 +22,7 @@ import File from './components/form/File';
 import Select from './components/form/Select';
 import Tree from './components/Tree';
 import Empty from './components/Empty'; 
+import Developing from './components/Developing'; 
 
 
 module.exports = { 
@@ -46,4 +47,5 @@ module.exports = {
     Select,
     Tree,
     Empty,
+    Developing,
 }

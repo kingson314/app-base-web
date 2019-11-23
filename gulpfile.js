@@ -46,6 +46,14 @@ gulp.task('copy', function() {
   }).pipe(gulp.dest(dist+"src"));
 
 
+   dist="/Volumes/Docs/Git/hf-race-admin/node_modules/app-base-web/"
+   gulp.src([scss.dest+ '/**/*'], {
+  }).pipe(gulp.dest(dist+"css"));
+   gulp.src([js.dest+ '/**/*'], {
+  }).pipe(gulp.dest(dist+"js"));
+  gulp.src(['src/**/*'], {
+  }).pipe(gulp.dest(dist+"src"));
+
   dist="/Volumes/Docs/Git/app-qy-web/node_modules/app-base-web/"
    gulp.src([scss.dest+ '/**/*'], {
   }).pipe(gulp.dest(dist+"css"));
