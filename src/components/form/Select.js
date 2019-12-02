@@ -11,8 +11,8 @@ export default  class MySelect extends React.Component {
             valueKey:"id",
             textKey:"name",
             hasNullVal:true,
-            nullValue:"",
-            nullText:"请选择",
+            nullValue:this.props.nullValue||"",
+            nullText:this.props.nullText||"请选择",
             data:[]
         }
         this.initData()

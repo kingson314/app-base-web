@@ -41,8 +41,8 @@ var Dic = function (_React$Component) {
 
         _this.state = {
             hasNullVal: true,
-            nullValue: "",
-            nullText: "请选择",
+            nullValue: _this.props.nullValue || "",
+            nullText: _this.props.nullText || "请选择",
             data: []
             // this.initData();
         };return _this;

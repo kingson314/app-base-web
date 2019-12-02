@@ -39,8 +39,8 @@ var MySelect = function (_React$Component) {
             valueKey: "id",
             textKey: "name",
             hasNullVal: true,
-            nullValue: "",
-            nullText: "请选择",
+            nullValue: _this.props.nullValue || "",
+            nullText: _this.props.nullText || "请选择",
             data: []
         };
         _this.initData();

@@ -24,16 +24,17 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CheckGroup = function (_React$Component) {
-    _inherits(CheckGroup, _React$Component);
+var RadioGroup = function (_React$Component) {
+    _inherits(RadioGroup, _React$Component);
 
-    function CheckGroup(props) {
-        _classCallCheck(this, CheckGroup);
+    function RadioGroup(props) {
+        _classCallCheck(this, RadioGroup);
 
-        var _this = _possibleConstructorReturn(this, (CheckGroup.__proto__ || Object.getPrototypeOf(CheckGroup)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (RadioGroup.__proto__ || Object.getPrototypeOf(RadioGroup)).call(this, props));
 
         _this.state = {
-            value: "[]",
+            value: "",
+            type: _this.props.type || "radio", //radio，button
             //options,dic只有一个能生效
             options: _this.props.options,
             dic: _this.props.dic //{ app:"",type:""},
@@ -42,9 +43,11 @@ var CheckGroup = function (_React$Component) {
         return _this;
     }
 
-    _createClass(CheckGroup, [{
+    _createClass(RadioGroup, [{
         key: 'init',
         value: function init() {
+            var _this2 = this;
+
             var rows = [];
             if (this.state.dic) {
                 var data = void 0;
@@ -59,24 +62,36 @@ var CheckGroup = function (_React$Component) {
                     var item = data[i];
                     var value = item.value;
                     var text = item.zh_CN;
-                    rows.push(_react2.default.createElement(
-                        _antd.Checkbox,
-                        { style: { marginRight: "5px" }, key: "chekbox-" + i, value: value },
+                    if (this.state.type == "button") rows.push(_react2.default.createElement(
+                        _antd.Radio.Button,
+                        { key: "radio-" + i, value: value },
+                        text
+                    ));else rows.push(_react2.default.createElement(
+                        _antd.Radio,
+                        { key: "radio-" + i, value: value },
                         text
                     ));
                 };
             } else {
                 this.state.options.map(function (item, index) {
                     if (item instanceof Object) {
-                        rows.push(_react2.default.createElement(
-                            _antd.Checkbox,
-                            { style: { marginRight: "5px" }, key: "chekbox-" + index, value: item.id },
+                        if (_this2.state.type == "button") rows.push(_react2.default.createElement(
+                            _antd.Radio.Button,
+                            { key: "radio-" + index, value: item.id },
+                            item.name
+                        ));else rows.push(_react2.default.createElement(
+                            _antd.Radio,
+                            { key: "radio-" + index, value: item.id },
                             item.name
                         ));
                     } else {
-                        rows.push(_react2.default.createElement(
-                            _antd.Checkbox,
-                            { style: { marginRight: "5px" }, key: "chekbox-" + index, value: item },
+                        if (_this2.state.type == "button") rows.push(_react2.default.createElement(
+                            _antd.Radio.Button,
+                            { key: "radio-" + index, value: item },
+                            item
+                        ));else rows.push(_react2.default.createElement(
+                            _antd.Radio,
+                            { key: "radio-" + index, value: item },
                             item
                         ));
                     }
@@ -87,22 +102,21 @@ var CheckGroup = function (_React$Component) {
     }, {
         key: 'onChange',
         value: function onChange(value) {
-            if (value) value = JSON.stringify(value);
             if (this.props.onChange) this.props.onChange(value);else this.setState({ value: value });
         }
     }, {
         key: 'render',
         value: function render() {
-            var _value = JSON.parse(this.props.value || this.state.value);
+            var _value = this.props.value || this.state.values;
             return _react2.default.createElement(
-                _antd.Checkbox.Group,
+                _antd.Radio.Group,
                 { value: _value, onChange: this.onChange.bind(this) },
                 this.init()
             );
         }
     }]);
 
-    return CheckGroup;
+    return RadioGroup;
 }(_react2.default.Component);
 
-exports.default = CheckGroup;
+exports.default = RadioGroup;

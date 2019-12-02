@@ -16,6 +16,7 @@ import net from './utils/net';
 import xlsx from './utils/xlsx';
 //组件
 import CheckGroup from './components/form/CheckGroup';
+import RadioGroup from './components/form/RadioGroup';
 import Dic from './components/form/Dic';
 import District from './components/form/District';
 import File from './components/form/File';
@@ -40,6 +41,7 @@ module.exports = {
     net,
     xlsx,
 // components
+    RadioGroup,
     CheckGroup,
     Dic,
     District,

@@ -56,6 +56,10 @@ var _CheckGroup = require('./components/form/CheckGroup');
 
 var _CheckGroup2 = _interopRequireDefault(_CheckGroup);
 
+var _RadioGroup = require('./components/form/RadioGroup');
+
+var _RadioGroup2 = _interopRequireDefault(_RadioGroup);
+
 var _Dic = require('./components/form/Dic');
 
 var _Dic2 = _interopRequireDefault(_Dic);
@@ -86,9 +90,7 @@ var _Developing2 = _interopRequireDefault(_Developing);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//组件
-
-//工具类
+//内核
 module.exports = {
     //utiil
     check: _check2.default,
@@ -104,6 +106,7 @@ module.exports = {
     net: _net2.default,
     xlsx: _xlsx2.default,
     // components
+    RadioGroup: _RadioGroup2.default,
     CheckGroup: _CheckGroup2.default,
     Dic: _Dic2.default,
     District: _District2.default,
@@ -112,4 +115,7 @@ module.exports = {
     Tree: _Tree2.default,
     Empty: _Empty2.default,
     Developing: _Developing2.default
-}; //内核
+};
+//组件
+
+//工具类

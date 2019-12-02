@@ -11,8 +11,8 @@ export default  class Dic extends React.Component {
         super(props);
         this.state={
             hasNullVal:true,
-            nullValue:"",
-            nullText:"请选择",
+            nullValue:this.props.nullValue||"",
+            nullText:this.props.nullText||"请选择",
             data:[]
         }
         // this.initData();
