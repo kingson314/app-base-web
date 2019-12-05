@@ -41,7 +41,6 @@
   }
   
   .main {
-    margin-top: 64px;
     .menu {
       background: #fff;
     }
@@ -51,9 +50,6 @@
       &>div {
         background: #fff;
        
-      }
-      .grid,.form-view,.form-edit{
-        min-height: 550px;
       }
     }
   }
@@ -188,7 +184,7 @@
   }
 
   .footer-copyright {
-    margin: 20px 0 10px 0!important;
+    margin: 10px 0 10px 0!important;
     text-align: center;
     background: transparent;
     color: #B8B8B8;

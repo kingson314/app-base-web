@@ -1,6 +1,6 @@
 {
   "name": "app-base-web",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "description": "web development common base package.",
   "main": "js/index.js",
   "scripts": {

@@ -1,4 +1,45 @@
 //antd
+.ant-table-thead > tr > th{
+  background:#fff!important;
+  font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #606266;
+}
+
+
+.ant-menu-item span {
+  font-weight: normal;
+  font-size: 13px;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #606266;
+}
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical-left .ant-menu-item,
+.ant-menu-vertical-right .ant-menu-item,
+.ant-menu-inline .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title,
+.ant-menu-vertical-left .ant-menu-submenu-title,
+.ant-menu-vertical-right .ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-submenu-title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.ant-menu-vertical .ant-menu-item:not(:last-child),
+.ant-menu-vertical-left .ant-menu-item:not(:last-child),
+.ant-menu-vertical-right .ant-menu-item:not(:last-child),
+.ant-menu-inline .ant-menu-item:not(:last-child) {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.ant-menu-vertical.ant-menu-sub,
+.ant-menu-vertical-left.ant-menu-sub,
+.ant-menu-vertical-right.ant-menu-sub {
+  min-width: 100px !important;
+}
+
 .has-error .ant-form-explain,
 .has-error .ant-form-split {
   padding: 3px 0 0 0;
@@ -29,11 +70,9 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-
 .ant-form-item {
   margin-bottom: 1rem !important;
 }
-
 .tab-span {
   line-height: 32px;
   display: block;
@@ -47,11 +86,9 @@
   border-color: #d9d9d9;
   font-weight: normal;
 }
-
 .ant-menu-inline {
   border-right: 0 !important;
 }
-
 .ant-menu-item {
   .iconfont {
     margin-right: 5px;
@@ -98,13 +135,12 @@
   background: rgba(255, 255, 255, 0.2);
   margin: 16px;
 }
-
 //custom
 .iframe {
   padding: 0 2rem 1rem 2rem;
 }
 .grid {
-  padding: 0 2rem;
+  padding: 0 15px;
   .title {
     padding: 2rem 0 2rem 0;
     font-size: 1.5rem;
@@ -225,13 +261,14 @@
     display: inline-block !important;
   }
 }
-
 .required {
   color: red;
   vertical-align: middle;
 }
-
 .myTab {
+  .ant-tabs-bar {
+    margin: 10px 0 0 0 !important;
+  }
   .ant-tabs-tab-active .tab-span {
     background-color: #a1d3ff;
 	  border: solid 1px #0088ff;
@@ -260,9 +297,7 @@
   word-spacing: normal;
   word-break: break-word;
 }
-
 //button
-
 .btn-copy {
   color: #fff !important;
   background-color: #28a745 !important;
@@ -324,7 +359,6 @@
     background-color: #ff4d4f !important;
   }
 }
-
 .btn-active {
   color: #fff !important;
   background-color: #3cb035!important;
