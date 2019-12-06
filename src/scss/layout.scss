@@ -2,6 +2,30 @@
     position: fixed;
     z-index: 99;
     width: 100%;
+    .ant-menu-item {
+      color: #fff;
+    }
+    .ant-menu-horizontal {
+      border: 0 !important;
+    }
+    .ant-menu-item-selected {
+      color: #eaeaea !important;
+      font-weight: bold !important;
+      border-bottom: 3px solid #fff !important;
+      &.btn{
+        border-bottom:0!important;
+      }
+    }
+    .ant-menu-horizontal > .ant-menu-item:hover,
+    .ant-menu-horizontal > .ant-menu-submenu:hover,
+    .ant-menu-horizontal > .ant-menu-item-active,
+    .ant-menu-horizontal > .ant-menu-submenu-active,
+    .ant-menu-horizontal > .ant-menu-item-open,
+    .ant-menu-horizontal > .ant-menu-submenu-open,
+    .ant-menu-horizontal > .ant-menu-item-selected,
+    .ant-menu-horizontal > .ant-menu-submenu-selected {
+      font-weight: bold !important;
+    }
     .ant-menu {
       .btn {
         color: #fff !important;
@@ -40,16 +64,15 @@
     }
   }
   
-  .main {
+  .main,.main-web,.main-admin {
+    background: #f0f2f5;
     .menu {
       background: #fff;
     }
-  
     .content {
       background: #fff;
       &>div {
         background: #fff;
-       
       }
     }
   }
@@ -104,8 +127,8 @@
   
 .footer {
   font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-  background: #1d284d !important;
-  background: rgba(29, 40, 77, 0.95) !important;
+  background: #1d284d ;
+  background: rgba(29, 40, 77, 0.95) ;
   overflow: hidden; 
 
   .footer-list {

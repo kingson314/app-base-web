@@ -1,4 +1,26 @@
 //antd
+
+#__next{
+  height: inherit;
+}
+.ant-layout-content{
+  height: inherit;
+}
+.ant-layout{
+  height:inherit;
+}
+.ant-layout-footer{
+  padding: 5px 50px!important;
+}
+.ant-checkbox-wrapper + .ant-checkbox-wrapper{
+  margin-left: 0!important;
+}
+.ant-checkbox + span{
+  padding-left: 3px!important;
+}
+.ant-table{
+  border-top:1px solid #e8e8e8;
+}
 .ant-table-thead > tr > th{
   background:#fff!important;
   font-size: 14px;
@@ -117,6 +139,7 @@
 .btn-group-radio {
   padding-left: 12px !important;
 }
+
 
 #components-layout-demo-custom-trigger .trigger {
   font-size: 18px;
