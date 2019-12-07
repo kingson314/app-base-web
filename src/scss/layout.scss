@@ -1,140 +1,171 @@
 .header {
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    .ant-menu-item {
-      color: #fff;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  .ant-menu-item {
+    color: #fff;
+  }
+  .ant-menu-horizontal {
+    border: 0 !important;
+  }
+  .ant-menu-item-selected {
+    color: #eaeaea !important;
+    font-weight: bold !important;
+    border-bottom: 3px solid #fff !important;
+    &.btn {
+      border-bottom: 0 !important;
     }
-    .ant-menu-horizontal {
-      border: 0 !important;
+  }
+  .ant-menu-horizontal > .ant-menu-item:hover,
+  .ant-menu-horizontal > .ant-menu-submenu:hover,
+  .ant-menu-horizontal > .ant-menu-item-active,
+  .ant-menu-horizontal > .ant-menu-submenu-active,
+  .ant-menu-horizontal > .ant-menu-item-open,
+  .ant-menu-horizontal > .ant-menu-submenu-open,
+  .ant-menu-horizontal > .ant-menu-item-selected,
+  .ant-menu-horizontal > .ant-menu-submenu-selected {
+    font-weight: bold !important;
+  }
+  .ant-menu {
+    .btn {
+      color: #fff !important;
+      padding: 0 25px !important;
+      line-height: 30px !important;
+      margin-bottom: 16px !important;
+      margin-top: 0 !important;
     }
-    .ant-menu-item-selected {
-      color: #eaeaea !important;
-      font-weight: bold !important;
-      border-bottom: 3px solid #fff !important;
-      &.btn{
-        border-bottom:0!important;
-      }
+
+    .btn-bg {
+      background: #00a4ff !important;
     }
-    .ant-menu-horizontal > .ant-menu-item:hover,
-    .ant-menu-horizontal > .ant-menu-submenu:hover,
-    .ant-menu-horizontal > .ant-menu-item-active,
-    .ant-menu-horizontal > .ant-menu-submenu-active,
-    .ant-menu-horizontal > .ant-menu-item-open,
-    .ant-menu-horizontal > .ant-menu-submenu-open,
-    .ant-menu-horizontal > .ant-menu-item-selected,
-    .ant-menu-horizontal > .ant-menu-submenu-selected {
-      font-weight: bold !important;
+    .btn-bg2 {
+      background: -webkit-radial-gradient(30% 44%, circle, #6eaeff 5%, #5d66d1 55%, #6264d0 100%) !important;
     }
+    .btn-bg1 {
+      background: transparent !important;
+    }
+  }
+
+  @media (min-width: 768px) {
     .ant-menu {
       .btn {
-        color: #fff !important;
-        padding: 0 25px !important;
-        line-height: 30px !important;
-        margin-bottom: 16px !important;
-        margin-top: 0 !important;
-      }
-  
-      .btn-bg {
-        background: #00a4ff !important;
-      }
-      .btn-bg1 {
-        background:transparent !important;
+        float: right;
+        margin-top: 16px !important;
+        margin-bottom: 0 !important;
       }
     }
-  
-    @media (min-width: 768px) {
-      .ant-menu {
-        .btn {
-          float: right;
-          margin-top: 16px !important;
-          margin-bottom: 0 !important;
-        }
-      }
-    }
-   
-    .logo {
-      width: 220px;
+  }
+
+  .logo {
+    width: 220px;
+    height: 64px;
+    background-image: url("/static/logo.png");
+    background-size: 220px 60px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    margin-right: 1rem !important;
+  }
+
+  .menu-text {  
+    border-bottom: 0 !important;
+    i {
+      color: #fff;
+      cursor: default;
       height: 64px;
-      background-image: url("/static/logo.png");
-      background-size: 220px 60px;
-      background-position: bottom;
-      background-repeat: no-repeat;
-      margin-right: 1rem !important;
-    }
-  }
-  
-  .main,.main-web,.main-admin {
-    background: #f0f2f5;
-    .menu {
-      background: #fff;
-    }
-    .content {
-      background: #fff;
-      &>div {
-        background: #fff;
-      }
-    }
-  }
-  
-  .adver {
-    position: relative;
-    height: 175px;
-    opacity: 0.83;
-    background: #49BBF8;
-    background: linear-gradient(to bottom, #49BBF8, #2386EE);
-  
-    .bg-pic {
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 50%;
-      margin-left: -342px;
-      width: 827px;
-      height: 304px;
-      background-repeat: no-repeat;
-      background-image:url("/static/bottom.png")
-    }
-  
-    p {
-      text-align: center;
-      font-size: 24px;
-      color: #FFF;
-      padding-top: 45px;
-      letter-spacing: 0;
-      line-height: 33px;
-      font-family: PingFangSC-Light, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-    }
-  
-    a {
-      display: block;
-      width: 94px;
-      height: 28px;
-      margin: 16px auto;
-      border: 1px solid #FFFFFF;
-      border-radius: 100px;
-      text-align: center;
-      font-size: 14px;
-      color: #fff!important;
-      line-height: 28px;
-      cursor: pointer;
-  
+      display: inline-block;
+      padding: 0 20px;
+      font-weight: normal;
       &:hover {
-        color: #ddd;
+        color: #fff;
+        border-bottom: 0 !important;
+        font-weight: normal !important;
       }
     }
   }
-  
+}
+
+.main,
+.main-web,
+.main-admin {
+  background: #f0f2f5;
+  .menu {
+    background: #fff;
+    padding: 10px 0;
+    .menutitle1 {
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      color: #606266 !important;
+    }
+  }
+  .content {
+    background: #fff;
+    & > div {
+      background: #fff;
+    }
+  }
+}
+
+.adver {
+  position: relative;
+  height: 175px;
+  opacity: 0.83;
+  background: #49bbf8;
+  background: linear-gradient(to bottom, #49bbf8, #2386ee);
+
+  .bg-pic {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    margin-left: -342px;
+    width: 827px;
+    height: 304px;
+    background-repeat: no-repeat;
+    background-image: url("/static/bottom.png");
+  }
+
+  p {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    padding-top: 45px;
+    letter-spacing: 0;
+    line-height: 33px;
+    font-family: PingFangSC-Light, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC",
+      "WenQuanYi Micro Hei", sans-serif;
+  }
+
+  a {
+    display: block;
+    width: 94px;
+    height: 28px;
+    margin: 16px auto;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff !important;
+    line-height: 28px;
+    cursor: pointer;
+
+    &:hover {
+      color: #ddd;
+    }
+  }
+}
+
 .footer {
-  font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-  background: #1d284d ;
-  background: rgba(29, 40, 77, 0.95) ;
-  overflow: hidden; 
+  font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC",
+    "WenQuanYi Micro Hei", sans-serif;
+  background: #1d284d;
+  background: rgba(29, 40, 77, 0.95);
+  overflow: hidden;
 
   .footer-list {
     margin: 15px auto 0 auto;
     font-size: 0;
-    border-bottom: 1px solid #E5E6FF;
+    border-bottom: 1px solid #e5e6ff;
     border-bottom: 1px solid rgba(229, 230, 255, 0.14);
     background: transparent;
 
@@ -172,16 +203,18 @@
       color: #9ba3a6;
       font-weight: 500;
       font-size: 15px;
-      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+        "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
     }
 
     a {
       height: 21px;
       line-height: 17px;
-      color: #fff!important;
+      color: #fff !important;
       font-size: 12px;
       transition: all 0.2s ease;
-      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+        "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
     }
   }
 
@@ -199,24 +232,26 @@
         line-height: 25px;
 
         a {
-          font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-          color: #B8B8B8;
+          font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+            "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+          color: #b8b8b8;
         }
       }
     }
   }
 
   .footer-copyright {
-    margin: 10px 0 10px 0!important;
+    margin: 10px 0 10px 0 !important;
     text-align: center;
     background: transparent;
-    color: #B8B8B8;
+    color: #b8b8b8;
     font-size: 12px;
     letter-spacing: 1px;
     a {
-      color: #FFFFFF!important;
+      color: #ffffff !important;
       transition: all 0.2s ease;
-      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+      font-family: PingFangSC-Thin, "Microsoft YaHei", Arial, "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+        "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
     }
   }
 }
@@ -228,7 +263,7 @@
   z-index: 100;
 
   .ant-col {
-    &>div {
+    & > div {
       cursor: pointer;
       margin-bottom: 2px;
       width: 50px;

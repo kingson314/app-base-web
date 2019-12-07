@@ -303,6 +303,23 @@
     background: none;
   }
 }
+.myTab1 {
+  
+  .ant-tabs-bar {
+    margin: 0 0 0 0 !important;
+    border:0!important;
+  }
+  .ant-tabs-tab-active .tab-span {
+    background-color: #a1d3ff;
+	  border: solid 1px #0088ff;
+  }
+  .ant-tabs-tab{
+    padding: 12px 12px 12px 0!important;
+  }
+  .ant-tabs-ink-bar {
+    background: none;
+  }
+}
 .new-target {
   color: #28b779 !important;
   // text-decoration: underline !important;
