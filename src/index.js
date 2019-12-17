@@ -24,6 +24,7 @@ import Select from './components/form/Select';
 import Tree from './components/Tree';
 import Empty from './components/Empty'; 
 import Developing from './components/Developing'; 
+import Buttons from './components/Buttons'; 
 
 
 module.exports = { 
@@ -50,4 +51,5 @@ module.exports = {
     Tree,
     Empty,
     Developing,
+    Buttons,
 }

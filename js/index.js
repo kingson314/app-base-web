@@ -88,9 +88,15 @@ var _Developing = require('./components/Developing');
 
 var _Developing2 = _interopRequireDefault(_Developing);
 
+var _Buttons = require('./components/Buttons');
+
+var _Buttons2 = _interopRequireDefault(_Buttons);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//内核
+//组件
+
+//工具类
 module.exports = {
     //utiil
     check: _check2.default,
@@ -114,8 +120,6 @@ module.exports = {
     Select: _Select2.default,
     Tree: _Tree2.default,
     Empty: _Empty2.default,
-    Developing: _Developing2.default
-};
-//组件
-
-//工具类
+    Developing: _Developing2.default,
+    Buttons: _Buttons2.default
+}; //内核

@@ -414,6 +414,9 @@
 }
 
 .btn-sendMsg{
+  font-size: 13px;
+  padding: 3px 8px !important;
+  margin-right: 5px;
   color: #fff !important;
   background-color: #2cb999 !important;
   border-color: #2cb999 !important;
@@ -421,12 +424,18 @@
 }
 
 .btn-sendEmail{
+  font-size: 13px;
+  padding: 3px 8px !important;
+  margin-right: 5px;
   color: #fff !important;
   background-color: #faad14 !important;
   border-color: #faad14 !important;
   outline: none;
 }
 .btn-auth {
+  font-size: 13px;
+  padding: 3px 8px !important;
+  margin-right: 5px;
   color: #fff !important;
   background-color: #2cb999 !important;
   border-color: #2cb999 !important;
@@ -435,16 +444,87 @@
     background-color: #04664f !important;
     border-color: #04664f !important;
   }
-}
+} 
+
 .btn-audit {
+  font-size: 13px;
+  padding: 3px 8px !important;
+  margin-right: 5px;
   color: #fff !important;
   background-color: #2cb999 !important;
-  border-color: #2cb999 !important;
-  outline: none;
+  border: 1px solid #2cb999 !important;
+  outline: 0 !important;
+  background-color: #2cb999;
+  border-radius: 2px;
   &:hover {
     background-color: #05a07c!important;
     border-color: #05a07c !important;
   }
+}
+
+
+.btn-notAudit {
+  font-size: 13px;
+  padding: 3px 8px !important;
+  color: #fff !important;
+  color: #fff !important;
+  background-color: #f76260 !important;
+  border-color: #f76260 !important;
+  outline: none;
+  &:hover {
+    background-color: #f8514e!important;
+    border-color: #f8514e !important;
+  }
+}
+
+.btn-pass {
+  font-size: 13px;
+  padding: 5px 10px !important;
+  margin-right: 5px;
+  color: #fff !important;
+  background-color: #2cb999 !important;
+  border: 1px solid #2cb999 !important;
+  outline: 0 !important;
+  background-color: #2cb999;
+  border-radius: 2px;
+  // &:hover {
+  //   background-color: #fff !important;
+  //   color: #2cb999 !important;
+  //   border: 1px solid #2cb999 !important;
+  // }
+}
+
+.btn-his {
+  margin-right: 5px;
+  font-size: 13px;
+  padding: 3px 8px !important;
+  color: #fff !important;
+  background-color: #909399 !important;
+  border: 1px solid #909399 !important;
+  outline: 0 !important;
+  background-color: #909399;
+  border-radius: 2px;
+  // &:hover {
+  //   background-color: #fff !important;
+  //   color: #909399 !important;
+  //   border: 1px solid #909399 !important;
+  // }
+}
+
+.btn-score {
+  font-size: 13px;
+  padding: 3px 8px !important;
+  color: #fff !important;
+  background-color: #fa8e3f !important;
+  border: 1px solid #fa8e3f !important;
+  outline: 0 !important;
+  background-color: #fa8e3f;
+  border-radius: 2px;
+  // &:hover {
+  //   background-color: #fff !important;
+  //   color: #909399 !important;
+  //   border: 1px solid #fa8e3f !important;
+  // }
 }
 
 .btn-revoke {
@@ -467,7 +547,86 @@
     background-color: #f87800 !important;
   }
 }
+ 
+.btn-publish {
+  width: 135px!important;
+  height: 45px!important;
+  line-height: 45px!important;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.89;
+  font-family: HYQiHei-GEW;
+  font-size: 18px;
+  color: #fff;
+  background: hsla(0, 0%, 100%, 0.1);
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  border-radius: 0!important;
+  &:hover {
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 103px 10px #2cd6fc;
+    color: #323e5d!important;
+  }
+}
 
+.btn-ask {
+  // background: transparent;
+  // border: 1px solid #fff;
+  // width: 135px;
+  // height: 45px;
+  // line-height: 45px;
+  // font-size: 18px;
+  // color: #fff;
+  // &:hover {
+  //   color: #aaa!important;
+  //   border: 1px solid #aaa!important;
+  // }
+  width: 135px!important;
+  height: 45px!important;
+  line-height: 45px!important;
+  text-align: center;
+  font-family: HYQiHei-GEW;
+  color: #fff;
+  font-size: 18px;
+  background: #2d5cc8;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  transition: all 0.2s;
+  border-radius: 0!important;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 103px 10px #2cd6fc;
+    color: #323e5d !important;
+  }
+}
+
+
+.btn-contact {
+  color: #fff !important;
+  background-color: #f5ad24 !important;
+  border-color: #f5ad24 !important;
+  outline: none;
+  &:hover {
+    background-color: #d88d02 !important;
+    border-color: #d88d02 !important;
+  }
+}
+.btn-large {
+  width: 120px;
+  height: 36px !important;
+  line-height: 36px !important;
+  font-size: 14px !important;
+}
+.btn-send {
+  color: #fff !important;
+  background-color: #faad14 !important;
+  border-color: #faad14 !important;
+  outline: none;
+}
+
+
+//---state---
 .state-color1 {
   color: #4990f2;
 }
