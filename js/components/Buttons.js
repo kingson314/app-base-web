@@ -121,17 +121,8 @@ var Empty = function (_React$Component) {
                     { style: { float: "left", margin: "15px" } },
                     _react2.default.createElement(
                         _antd.Button,
-                        { className: 'btn-audit' },
-                        'btn-audit'
-                    )
-                ),
-                _react2.default.createElement(
-                    'li',
-                    { style: { float: "left", margin: "15px" } },
-                    _react2.default.createElement(
-                        _antd.Button,
-                        { className: 'btn-notAudit' },
-                        'btn-notAudit'
+                        { className: 'btn-notPass' },
+                        'btn-notPass'
                     )
                 ),
                 _react2.default.createElement(
@@ -222,6 +213,15 @@ var Empty = function (_React$Component) {
                         _antd.Button,
                         { className: 'btn-large' },
                         'btn-large'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-eaxm' },
+                        'btn-eaxm'
                     )
                 )
             );
