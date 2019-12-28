@@ -143,7 +143,11 @@
 .ant-select{
   width:100%;
 }
-
+.ant-input-number{
+  .ant-input-number-handler-wrap{
+    opacity:1!important;
+  }
+}
 .btn-group-radio {
   padding-left: 12px !important;
 }

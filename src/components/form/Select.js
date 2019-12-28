@@ -10,7 +10,7 @@ export default  class MySelect extends React.Component {
         this.state={
             valueKey:"id",
             textKey:"name",
-            hasNullVal:true,
+            hasNullVal:this.props.hasNullVal===false?false:true,
             nullValue:this.props.nullValue||"",
             nullText:this.props.nullText||"请选择",
             data:[]

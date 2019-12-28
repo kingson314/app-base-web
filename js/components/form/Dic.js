@@ -40,7 +40,7 @@ var Dic = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Dic.__proto__ || Object.getPrototypeOf(Dic)).call(this, props));
 
         _this.state = {
-            hasNullVal: true,
+            hasNullVal: _this.props.hasNullVal === false ? false : true,
             nullValue: _this.props.nullValue || "",
             nullText: _this.props.nullText || "请选择",
             data: []

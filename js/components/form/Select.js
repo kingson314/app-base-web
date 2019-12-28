@@ -38,7 +38,7 @@ var MySelect = function (_React$Component) {
         _this.state = {
             valueKey: "id",
             textKey: "name",
-            hasNullVal: true,
+            hasNullVal: _this.props.hasNullVal === false ? false : true,
             nullValue: _this.props.nullValue || "",
             nullText: _this.props.nullText || "请选择",
             data: []

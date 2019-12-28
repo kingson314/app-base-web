@@ -223,6 +223,105 @@ var Empty = function (_React$Component) {
                         { className: 'btn-eaxm' },
                         'btn-eaxm'
                     )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-set' },
+                        'btn-set'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-extract' },
+                        'btn-extract'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-notice' },
+                        'btn-notice'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-begin' },
+                        'btn-begin'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-disabled' },
+                        'btn-disabled'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-saveRs' },
+                        'btn-saveRs'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-record' },
+                        'btn-record'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-return' },
+                        'btn-return'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-confirm' },
+                        'btn-confirm'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-close' },
+                        'btn-close'
+                    )
+                ),
+                _react2.default.createElement(
+                    'li',
+                    { style: { float: "left", margin: "15px" } },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn-confirmed' },
+                        'btn-confirmed'
+                    )
                 )
             );
         }

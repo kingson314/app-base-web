@@ -10,7 +10,7 @@ export default  class Dic extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            hasNullVal:true,
+            hasNullVal:this.props.hasNullVal===false?false:true,
             nullValue:this.props.nullValue||"",
             nullText:this.props.nullText||"请选择",
             data:[]
