@@ -20,6 +20,7 @@ import RadioGroup from './components/form/RadioGroup';
 import Dic from './components/form/Dic';
 import District from './components/form/District';
 import File from './components/form/File';
+import FileFast from './components/form/FileFast';
 import Select from './components/form/Select';
 import Tree from './components/Tree';
 import Empty from './components/Empty'; 
@@ -47,6 +48,7 @@ module.exports = {
     Dic,
     District,
     File,
+    FileFast,
     Select,
     Tree,
     Empty,

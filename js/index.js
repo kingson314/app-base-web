@@ -72,6 +72,10 @@ var _File = require('./components/form/File');
 
 var _File2 = _interopRequireDefault(_File);
 
+var _FileFast = require('./components/form/FileFast');
+
+var _FileFast2 = _interopRequireDefault(_FileFast);
+
 var _Select = require('./components/form/Select');
 
 var _Select2 = _interopRequireDefault(_Select);
@@ -94,9 +98,7 @@ var _Buttons2 = _interopRequireDefault(_Buttons);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//组件
-
-//工具类
+//内核
 module.exports = {
     //utiil
     check: _check2.default,
@@ -117,9 +119,13 @@ module.exports = {
     Dic: _Dic2.default,
     District: _District2.default,
     File: _File2.default,
+    FileFast: _FileFast2.default,
     Select: _Select2.default,
     Tree: _Tree2.default,
     Empty: _Empty2.default,
     Developing: _Developing2.default,
     Buttons: _Buttons2.default
-}; //内核
+};
+//组件
+
+//工具类
