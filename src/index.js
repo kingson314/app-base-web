@@ -26,7 +26,7 @@ import Tree from './components/Tree';
 import Empty from './components/Empty'; 
 import Developing from './components/Developing'; 
 import Buttons from './components/Buttons'; 
-
+import Attachment from './components/Attachment'; 
 
 module.exports = { 
 //utiil
@@ -54,4 +54,5 @@ module.exports = {
     Empty,
     Developing,
     Buttons,
+    Attachment,
 }

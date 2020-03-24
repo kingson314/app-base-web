@@ -49,6 +49,20 @@ module.exports = {
     }
     return _rs;
   },
+
+  getUrlParam: function getUrlParam(url, paramName) {
+    if (!url) return "";
+    var arrStr = url.substring(url.indexOf("?") + 1).split("&");
+    for (var i = 0; i < arrStr.length; i++) {
+      var loc = arrStr[i].indexOf(paramName + "=");
+      if (loc != -1) {
+        return arrStr[i].replace(paramName + "=", "").replace("?", "");
+        break;
+      }
+    }
+    return "";
+  },
+
   /**
    * ajax请求
    *

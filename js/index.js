@@ -96,9 +96,15 @@ var _Buttons = require('./components/Buttons');
 
 var _Buttons2 = _interopRequireDefault(_Buttons);
 
+var _Attachment = require('./components/Attachment');
+
+var _Attachment2 = _interopRequireDefault(_Attachment);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//内核
+//组件
+
+//工具类
 module.exports = {
     //utiil
     check: _check2.default,
@@ -124,8 +130,6 @@ module.exports = {
     Tree: _Tree2.default,
     Empty: _Empty2.default,
     Developing: _Developing2.default,
-    Buttons: _Buttons2.default
-};
-//组件
-
-//工具类
+    Buttons: _Buttons2.default,
+    Attachment: _Attachment2.default
+}; //内核
