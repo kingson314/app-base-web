@@ -12,6 +12,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _antd = require('antd');
 
+var _string = require('../../utils/string');
+
+var _string2 = _interopRequireDefault(_string);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -57,12 +61,33 @@ var File = function (_React$Component) {
       });
       if (fileList) fileList = JSON.stringify(fileList);
       if (this.props.onChange) this.props.onChange(fileList);else this.setState({ fileList: fileList });
-      console.log(fileList);
     }
   }, {
     key: 'render',
     value: function render() {
-      var _fileList = JSON.parse(this.props.fileList || this.state.fileList);
+      var _fileList = void 0;
+      try {
+        _fileList = JSON.parse(this.props.fileList || this.state.fileList);
+        if (!(_fileList instanceof Object)) {
+          _fileList = this.props.fileList;
+          var index = _fileList.lastIndexOf('attname=');
+          if (index > 0) {
+            var name = _fileList.substring(index + 'attname='.length);
+            _fileList = [{ "uid": _string2.default.uuid(), "lastModified": 1581676081373, "name": name, "size": 692032, "type": "image/png", "percent": 100, "status": "done", "xhr": {}, "url": this.props.fileList }];
+          } else {
+            _fileList = [];
+          }
+        }
+      } catch (e) {
+        _fileList = this.props.fileList;
+        var _index = _fileList.lastIndexOf('attname=');
+        if (_index > 0) {
+          var _name = _fileList.substring(_index + 'attname='.length);
+          _fileList = [{ "uid": _string2.default.uuid(), "lastModified": 1581676081373, "name": _name, "size": 692032, "type": "image/png", "percent": 100, "status": "done", "xhr": {}, "url": this.props.fileList }];
+        } else {
+          _fileList = [];
+        }
+      }
       return _react2.default.createElement(
         _antd.Upload,
         { className: this.props.cls, action: 'https://fastdfs.7ipr.com/ipr/fastdfs/upload', multiple: true, onChange: this.onChange.bind(this), fileList: _fileList, listType: 'picture' },

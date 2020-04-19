@@ -25,26 +25,36 @@ var _Export = {
     //             }, reject)
     //     })
     // },
+
+    onErr: function onErr() {
+        _net2.default.cookie.remove("_isLogin");
+        _net2.default.cookie.remove("_token");
+        if (top) {
+            top.location.href = "/";
+        } else {
+            location.href = "/";
+        }
+    },
     setUser: function setUser(user) {
         if (!user) {
-            _net2.default.localStorage.remove("_token");
-            _net2.default.localStorage.remove("_userId");
-            _net2.default.localStorage.remove("_userName");
-            _net2.default.localStorage.remove("_userType");
+            _net2.default.cookie.remove("_token");
+            _net2.default.cookie.remove("_userId");
+            _net2.default.cookie.remove("_userName");
+            _net2.default.cookie.remove("_userType");
             _net2.default.localStorage.remove("_menuId");
         } else {
-            _net2.default.localStorage.set("_token", user.token);
-            _net2.default.localStorage.set("_userId", user.id);
-            _net2.default.localStorage.set("_userName", user.name);
-            _net2.default.localStorage.set("_userType", user.type);
+            _net2.default.cookie.set("_token", user.token);
+            _net2.default.cookie.set("_userId", user.id);
+            _net2.default.cookie.set("_userName", user.name);
+            _net2.default.cookie.set("_userType", user.type);
             _net2.default.localStorage.set("_menuId", user.memo);
         }
     },
     getUser: function getUser() {
         var user = {
-            token: _net2.default.localStorage.get("_token") || "",
-            id: _net2.default.localStorage.get("_userId") || "",
-            name: _net2.default.localStorage.get("_userName") || "",
+            token: _net2.default.cookie.get("_token") || "",
+            id: _net2.default.cookie.get("_userId") || "",
+            name: _net2.default.cookie.get("_userName") || "",
             type: _net2.default.localStorage.get("_userType") || ""
         };
         return user;
@@ -79,12 +89,14 @@ var _Export = {
             config = f_req(config);
             return config;
         }, function (error) {
-            return Promise.reject(error);
+            _Export.onErr();
+            // return Promise.reject(error);
         });
         _axios2.default.interceptors.response.use(function (response) {
             return f_res(response);
         }, function (error) {
-            return Promise.reject(error);
+            _Export.onErr();
+            // return Promise.reject(error);
         });
     }
 };

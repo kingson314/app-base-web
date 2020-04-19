@@ -12,26 +12,36 @@ const _Export = {
     //             }, reject)
     //     })
     // },
+
+    onErr: function () {
+        net.cookie.remove("_isLogin");
+        net.cookie.remove("_token");
+        if (top) {
+            top.location.href = "/"
+        } else {
+            location.href = "/"
+        }
+    },
     setUser: function (user) {
         if (!user) {
-            net.localStorage.remove("_token");
-            net.localStorage.remove("_userId");
-            net.localStorage.remove("_userName");
-            net.localStorage.remove("_userType");
+            net.cookie.remove("_token");
+            net.cookie.remove("_userId");
+            net.cookie.remove("_userName");
+            net.cookie.remove("_userType");
             net.localStorage.remove("_menuId");
         } else {
-            net.localStorage.set("_token", user.token);
-            net.localStorage.set("_userId", user.id);
-            net.localStorage.set("_userName", user.name);
-            net.localStorage.set("_userType", user.type);
+            net.cookie.set("_token", user.token);
+            net.cookie.set("_userId", user.id);
+            net.cookie.set("_userName", user.name);
+            net.cookie.set("_userType", user.type);
             net.localStorage.set("_menuId", user.memo);
         }
     },
     getUser: function () {
         let user = {
-            token: net.localStorage.get("_token") || "",
-            id: net.localStorage.get("_userId") || "",
-            name: net.localStorage.get("_userName") || "",
+            token: net.cookie.get("_token") || "",
+            id: net.cookie.get("_userId") || "",
+            name: net.cookie.get("_userName") || "",
             type: net.localStorage.get("_userType") || "",
         };
         return user;
@@ -42,7 +52,7 @@ const _Export = {
             userId: String(user.id),
         });
         return new Promise((resolve, reject) => {
-            axios.post(url, data,{
+            axios.post(url, data, {
                 headers: {
                     _log,
                     _langue: "zh_CN",
@@ -63,16 +73,18 @@ const _Export = {
             config.timeout = 6000;
             // config.withCredentials = true; // 允许携带token ,这个是解决跨域产生的相关问题
             config.data = qs.stringify(config.data);
-            config=f_req(config)
+            config = f_req(config)
             return config;
         }, error => {
-            return Promise.reject(error);
+            _Export.onErr();
+            // return Promise.reject(error);
         })
         axios.interceptors.response.use(response => {
-           return  f_res(response);
+            return f_res(response);
         }, error => {
-            return Promise.reject(error);
-        }); 
+            _Export.onErr();
+            // return Promise.reject(error);
+        });
     }
 }
 module.exports = _Export;
