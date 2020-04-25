@@ -339,6 +339,7 @@
 }
 //label and field
 .label {
+  display: inline-block;
   &:after {
     content: "\FF1A";
   }

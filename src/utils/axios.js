@@ -42,7 +42,7 @@ const _Export = {
             token: net.cookie.get("_token") || "",
             id: net.cookie.get("_userId") || "",
             name: net.cookie.get("_userName") || "",
-            type: net.localStorage.get("_userType") || "",
+            type: net.cookie.get("_userType") || "",
         };
         return user;
     },

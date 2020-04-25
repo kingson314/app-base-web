@@ -55,7 +55,7 @@ var _Export = {
             token: _net2.default.cookie.get("_token") || "",
             id: _net2.default.cookie.get("_userId") || "",
             name: _net2.default.cookie.get("_userName") || "",
-            type: _net2.default.localStorage.get("_userType") || ""
+            type: _net2.default.cookie.get("_userType") || ""
         };
         return user;
     },
